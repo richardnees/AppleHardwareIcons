@@ -2,9 +2,6 @@
 
 import Cocoa
 
-
-let model = "iPhone8,1"
-
 func nameAndImage(forModel model: String) -> (String, NSImage)? {
     let tag = "com.apple.device-model-code"
     
