@@ -2,6 +2,22 @@
 
 import Cocoa
 
+func model() -> String {
+    #if (arch(i386) || arch(x86_64)) && os(iOS)
+        return "iOS Simulator"
+    #elseif (arch(i386) || arch(x86_64)) && os(watchOS)
+        return "watchOS Simulator"
+    #elseif (arch(i386) || arch(x86_64)) && os(tvOS)
+        return "tvOS Simulator"
+    #else
+        var size = 0
+        sysctlbyname("hw.model", nil, &size, nil, 0)
+        var machine = [CChar](repeating: 0,  count: Int(size))
+        sysctlbyname("hw.model", &machine, &size, nil, 0)
+        return String(cString: machine)
+    #endif
+}
+
 func nameAndImage(forModel model: String) -> (String, NSImage)? {
     let tag = "com.apple.device-model-code"
     
@@ -33,6 +49,8 @@ func nameAndImage(forModel model: String) -> (String, NSImage)? {
 func namesAndImages(forModels models: [String]) -> [(String, NSImage)] {
     return models.flatMap { [nameAndImage(forModel: $0)].flatMap { $0 } }
 }
+
+let currentModelImage = nameAndImage(forModel: model())
 
 let phoneImages = namesAndImages(forModels: ["iPhone1,1", "iPhone2,1", "iPhone3,1", "iPhone4,1", "iPhone5,1", "iPhone6,1", "iPhone6,2", "iPhone7,1", "iPhone7,2", "iPhone8,1", "iPhone8,2", "iPhone9,1", "iPhone9,2"])
 
