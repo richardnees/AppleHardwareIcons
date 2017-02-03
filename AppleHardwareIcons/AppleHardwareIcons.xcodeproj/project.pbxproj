@@ -10,7 +10,7 @@
 		95BB06A31DE6F2A200EAD03E /* AppleHardwareIcons.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95BB06991DE6F2A200EAD03E /* AppleHardwareIcons.framework */; };
 		95BB06A81DE6F2A200EAD03E /* AppleHardwareIconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB06A71DE6F2A200EAD03E /* AppleHardwareIconsTests.swift */; };
 		95BB06AA1DE6F2A200EAD03E /* AppleHardwareIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = 95BB069C1DE6F2A200EAD03E /* AppleHardwareIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		95BB06B61DE6F32200EAD03E /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB06B51DE6F32200EAD03E /* Converter.swift */; };
+		95BB06B61DE6F32200EAD03E /* Hardware.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB06B51DE6F32200EAD03E /* Hardware.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +30,7 @@
 		95BB06A21DE6F2A200EAD03E /* AppleHardwareIconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleHardwareIconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95BB06A71DE6F2A200EAD03E /* AppleHardwareIconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleHardwareIconsTests.swift; sourceTree = "<group>"; };
 		95BB06A91DE6F2A200EAD03E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95BB06B51DE6F32200EAD03E /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		95BB06B51DE6F32200EAD03E /* Hardware.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hardware.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				95BB069C1DE6F2A200EAD03E /* AppleHardwareIcons.h */,
-				95BB06B51DE6F32200EAD03E /* Converter.swift */,
+				95BB06B51DE6F32200EAD03E /* Hardware.swift */,
 				95BB069D1DE6F2A200EAD03E /* Info.plist */,
 			);
 			path = AppleHardwareIcons;
@@ -146,7 +146,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0810;
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Richard Nees";
 				TargetAttributes = {
 					95BB06981DE6F2A200EAD03E = {
@@ -201,7 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95BB06B61DE6F32200EAD03E /* Converter.swift in Sources */,
+				95BB06B61DE6F32200EAD03E /* Hardware.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +242,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -294,6 +295,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -409,6 +411,7 @@
 				95BB06AF1DE6F2A200EAD03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95BB06B01DE6F2A200EAD03E /* Build configuration list for PBXNativeTarget "AppleHardwareIconsTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				95BB06B21DE6F2A200EAD03E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

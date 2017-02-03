@@ -1,6 +1,6 @@
 import Cocoa
 
-public class Converter {
+public class Hardware {
     
     public init() {
         
