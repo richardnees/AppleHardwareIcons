@@ -43,8 +43,8 @@ public class Hardware {
         }
         
         guard
-            let description = UTTypeCopyDescription(uti)?.takeUnretainedValue() as? String,
-            let bundleURL = UTTypeCopyDeclaringBundleURL(uti)?.takeUnretainedValue() as? URL,
+            let description = UTTypeCopyDescription(uti)?.takeUnretainedValue() as String?,
+            let bundleURL = UTTypeCopyDeclaringBundleURL(uti)?.takeUnretainedValue() as URL?,
             let bundle = Bundle(url: bundleURL),
             let imageURL = bundle.url(forResource: iconFileName, withExtension: nil),
             let image = NSImage(contentsOf: imageURL) else {
